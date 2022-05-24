@@ -5,7 +5,7 @@ width: 100%;
 display: flex;
 align-items: center;
 background-color: ${({ theme }) => theme.lightgrey2};
-padding: 0 4rem;
+padding: 0 6rem;
 padding-top: 4rem;
 padding-bottom: 4rem;
 
@@ -53,13 +53,16 @@ section {
             text-decoration: none;
             gap: 1rem;
 
-            li{
-                font-size: 1.12rem;
+            a {
                 transition: 0.4s all;
-                
+
                 &:hover {
                     color: ${({ theme }) => theme.blue};
                 }
+            }
+
+            li{
+                font-size: 1.12rem;
             }
         }
     }
