@@ -13,7 +13,7 @@ section {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    gap: 10rem;
+    gap: 8rem;
 
     > div {
 
