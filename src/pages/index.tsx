@@ -28,6 +28,15 @@ export default function Home({ posts }) {
           <section>
             <CardContainer>
               {posts.nodes.slice(0, 8).map((post) => {
+
+                const data = (post.date)
+                const today = new Date(data).toLocaleDateString('pt-BR', {
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric'
+                });
+
+
                 return (
                   <Link href={`/posts/${post.slug}`}>
                     <a>
@@ -40,7 +49,7 @@ export default function Home({ posts }) {
                           <img src={post.author.node.avatar.url} alt="avatar" />
                           <span>
                             <h3>{post.author.node.name}</h3>
-                            <p>{post.date}</p>
+                            <p>{today}</p>
                           </span>
                         </section>
                       </Card>
@@ -58,7 +67,7 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   const res = await fetch(process.env.GRAPHQL_ACCESS_ENDPOINT, {
     method: 'POST',

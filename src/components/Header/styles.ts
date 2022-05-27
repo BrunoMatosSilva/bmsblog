@@ -13,7 +13,7 @@ background: ${({ theme }) => theme.lightgrey} ;
 box-shadow: 1px -12px 39px 0px #000000;
 z-index: 99999999;
 
-section {
+ul {
     display: flex;
     align-items: center;
     flex-direction: row;
