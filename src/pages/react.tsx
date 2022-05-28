@@ -9,8 +9,7 @@ import { Header } from './../components/Header';
 import { Hero } from './../components/Hero';
 import { Subscribe } from './../components/Subscribe';
 
-export default function CategoryCss({ posts }) {
-    console.log({ posts });
+export default function CategoryReact({ posts }) {
 
     return (
         <div>
@@ -25,7 +24,7 @@ export default function CategoryCss({ posts }) {
                 <Hero />
                 <Category />
                 <ContainerArticles>
-                    <Title title="Css" path="/categories" category="See All Category" icon={<RiArrowRightSLine />} />
+                    <Title title="ReactJS" path="/categories" category="See All Category" icon={<RiArrowRightSLine />} />
                     <section>
                         <CardContainer>
                             {posts.nodes.slice(0, 8).map((post) => {
@@ -76,7 +75,7 @@ export async function getStaticProps() {
         body: JSON.stringify({
             query: `
             query NewQuery {
-                posts(where: {categoryName: "css"}) {
+                posts(where: {categoryName: "reactjs"}) {
                   nodes {
                     id
                     slug

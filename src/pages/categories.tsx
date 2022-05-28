@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { RiArrowRightSLine } from 'react-icons/ri';
-import { Category } from '../components/Category';
+import { RiArrowLeftRightLine } from 'react-icons/ri';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
@@ -9,7 +8,7 @@ import { Subscribe } from '../components/Subscribe';
 import { Title } from '../components/Title';
 import { Card, CardContainer, ContainerArticles } from '../styles/global';
 
-export default function Home({ posts }) {
+export default function Categories({ posts }) {
 
   return (
     <div>
@@ -22,12 +21,11 @@ export default function Home({ posts }) {
       <main>
         <Header />
         <Hero />
-        <Category />
         <ContainerArticles>
-          <Title title="Featured Article" path="/categories" category="See All Category" icon={<RiArrowRightSLine />} />
+          <Title title="All Posts" path="/" category="Return Home" icon={<RiArrowLeftRightLine />} />
           <section>
             <CardContainer>
-              {posts.nodes.slice(0, 8).map((post) => {
+              {posts.nodes.map((post) => {
 
                 const data = (post.date)
                 const today = new Date(data).toLocaleDateString('pt-BR', {

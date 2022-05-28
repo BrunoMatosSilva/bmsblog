@@ -6,6 +6,7 @@ import { ContainerPost, PostBody } from "./styles";
 
 export default function Post(data) {
     const post = data.post;
+    console.log(post);
 
     const datatime = (post.date)
     const today = new Date(datatime).toLocaleDateString('pt-BR', {
@@ -35,20 +36,21 @@ export default function Post(data) {
                                 <div>
                                     <h2>{post.title}</h2>
                                     <section>
-                                        <p>{today}</p>
-                                        -
-                                        <p>{post.categories.nodes[0].name}</p>
-                                        <span>
+                                        <div>
+                                            <p>{today}</p>
+                                            -
+                                            <p>{post.categories.nodes[0].name}</p>
+                                        </div>
 
-                                            Autor:
+                                        <div>
                                             <span>
                                                 <img src={post.author.node.avatar.url} alt={post.author.node.name} />
                                             </span>
                                             <b>{post.author.node.name}</b>
-                                        </span>
+                                        </div>
                                     </section>
                                 </div>
-                                <section>
+                                <section className="post">
                                     <article dangerouslySetInnerHTML={{ __html: post.content }}></article>
                                 </section>
                             </>

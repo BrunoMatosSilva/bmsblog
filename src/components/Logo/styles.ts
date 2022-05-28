@@ -5,7 +5,12 @@ export const LogoContainer = styled.div`
     flex-direction: row;
     align-items: flex-end;
 
-    > h2 {
+    a {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+        > h2 {
         font-size: 2.25rem;
         font-weight: 700;
         color: ${({ theme }) => theme.darkblue};
@@ -16,4 +21,7 @@ export const LogoContainer = styled.div`
         font-weight: bold;
         color: ${({ theme }) => theme.blue};
     }
+    }
+
+    
 `;
