@@ -3,6 +3,14 @@ import { FiChevronDown } from "react-icons/fi";
 import { InputSearch } from "../InputSearch";
 
 export function Hero() {
+
+  function handleScrollFeature() {
+    window.scroll({
+      top: 900,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <>
       <Container>
@@ -17,7 +25,9 @@ export function Hero() {
         <img src="/hero.svg" alt="boneco" />
       </Container>
       <Spacer>
-        <a href="/category"><FiChevronDown /></a>
+        <button type="button" onClick={handleScrollFeature}>
+          <FiChevronDown />
+        </button>
       </Spacer>
     </>
 

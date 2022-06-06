@@ -23,6 +23,31 @@ ul {
     font-weight: bold;
     transition: 0.4s all;
 
+    .mobile {
+      display: none;
+    }
+    @media(max-width: 900px) {
+      .mobile {
+        display: initial;
+      }
+      > ul {
+        display: none;
+      }
+    }
+  }
+  @media(max-width: 700px) {
+    padding: 14.5px 16px;
+  }
+ @media (max-width: 680px) {
+     > ul {
+        display: none;
+      }
+    }
+@media (min-width: 681px) {
+  > section {
+    display: none;
+  }
+
     a {
     padding-left: 1rem;
 

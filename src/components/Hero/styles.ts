@@ -50,14 +50,21 @@ background-color: ${({ theme }) => theme.lightgrey2};
 padding-top: 8rem;
 padding-bottom: 4rem;
 
-a {
+button {
+    border: none;
+    background: transparent;
+
+    svg {
     font-size: 1.5rem;
     color: ${({ theme }) => theme.black};
     transition: 0.4s;
+    
+   
 
     &:hover {
         transform: scale(1.5);
         color: ${({ theme }) => theme.blue};
     }
+}
 }
 `;

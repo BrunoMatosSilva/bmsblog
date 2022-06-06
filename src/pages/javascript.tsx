@@ -10,7 +10,6 @@ import { Hero } from './../components/Hero';
 import { Subscribe } from './../components/Subscribe';
 
 export default function CategoryJS({ posts }) {
-    console.log({ posts });
 
     return (
         <div>

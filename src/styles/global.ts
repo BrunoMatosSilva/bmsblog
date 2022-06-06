@@ -75,6 +75,7 @@ padding-bottom: 1rem;
 margin-bottom: 2rem;
 transition: 0.4s all;
 border-radius: 0.78rem;
+overflow: hidden;
 
 &:hover {
     -webkit-box-shadow: 10px 10px 38px -21px rgba(0,0,0,0.75);
@@ -96,6 +97,7 @@ box-shadow: 10px 10px 38px -21px rgba(0,0,0,0.75);
         color: ${({ theme }) => theme.black};
         font-size: 1.25rem;
         padding-top: 1rem;
+        height: 3.75rem;
     }
 }
 

@@ -1,4 +1,5 @@
 import NextNProgress from 'nextjs-progressbar';
+import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from '../styles/global';
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         height={5}
         showOnShallow
       />
+      <Toaster position="bottom-right" />
       <Component {...pageProps} />
       <GlobalStyles />
     </ThemeProvider>
