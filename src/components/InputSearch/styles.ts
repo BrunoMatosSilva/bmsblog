@@ -5,22 +5,31 @@ width: 100%;
 display: flex;
 align-items: center;
 padding-top: 1rem;
+justify-content: center;
 
 input {
     height: 4rem;
-    width: 27.75rem;
+    width: 30.75rem;
     border: none;
     border-radius: 0.5rem;
     padding-left: 1rem;
     font-size: 1.25rem;
     background-color: ${({ theme }) => theme.white};
 
+    @media(max-width: 900px){
+        width: 13.25rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+}
+
     &::placeholder {
         color: ${({ theme }) => theme.grey};
         padding-left: 1rem;
         font-size: 1.25rem;
     }
-}
+
+    
 
 button {
     height: 4rem;
@@ -33,6 +42,11 @@ button {
     border: none;
     border-radius: 0.5rem;
     transition: 0.4s all;
+
+    @media(max-width: 900px){
+        height: 3rem;
+        font-size: 1rem;
+    }
 
     &:hover {
         background-color: ${({ theme }) => theme.darkblue};

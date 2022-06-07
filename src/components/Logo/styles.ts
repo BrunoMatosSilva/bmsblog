@@ -14,6 +14,10 @@ export const LogoContainer = styled.div`
         font-size: 2.25rem;
         font-weight: 700;
         color: ${({ theme }) => theme.darkblue};
+
+        @media(max-width: 900px){
+            font-size: 1.8rem;
+        }
     }
 
     span {

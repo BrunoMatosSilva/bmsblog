@@ -10,22 +10,25 @@ padding: 0 4rem;
 background-color: ${({ theme }) => theme.lightgrey2};
 padding-top: 8rem;
 
-> svg {
-        height:24.18rem;
-        width: 29.37rem;
-    }
-
 > section {
     max-width: 41.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
+    @media(max-width: 900px){
+            max-width: 25.25rem;
+        }
+
     h2 {
         font-size: 4rem;
         font-weight: bold;
         color: ${({ theme }) => theme.black};
         padding-bottom: 1rem;
+
+        @media(max-width: 900px){
+            font-size: 2rem;
+        }
     }
 
     > div {
@@ -35,9 +38,20 @@ padding-top: 8rem;
             color: ${({ theme }) => theme.darkgrey};
             padding-left: 1rem;
             font-size: 1.25rem;
+
+            @media(max-width: 900px){
+            font-size: 1rem;
+        }
         }
     }
 
+}
+
+img {
+    @media(max-width: 900px){
+            height: 18.8rem;
+            width:19.15rem;
+        }
 }
 `;
 

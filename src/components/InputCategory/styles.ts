@@ -15,6 +15,11 @@ div {
     border-radius: 0.5rem;
     transition: 0.4s all;
 
+    @media(max-width: 900px){
+        width: 6.25rem;
+        height: 8.25rem;
+    }
+
     &:hover {
         background-color: ${({ theme }) => theme.blue};
         color: ${({ theme }) => theme.white};
@@ -30,6 +35,16 @@ div {
         height: 3.75rem;
         background-color: ${({ theme }) => theme.white};
         border-radius: 0.5rem;
+
+        @media(max-width: 900px){
+            width: 0.85rem;
+            height: 0.85rem;
+        }
+
+        img {
+            height: 1.50rem;
+            width: 1.50rem;
+        }
     }
 
     h2 {
@@ -37,6 +52,10 @@ div {
         font-size: 1.5rem;
         padding-top: 2rem;
         margin-left: 2rem;
+
+        @media(max-width: 900px){
+            font-size: 0.65rem;
+        }
     }
 
 }

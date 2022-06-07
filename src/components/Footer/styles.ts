@@ -15,6 +15,11 @@ section {
     flex-direction: row;
     gap: 8rem;
 
+    @media(max-width: 900px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     > div {
 
         color: ${({ theme }) => theme.black};

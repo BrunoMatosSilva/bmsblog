@@ -13,6 +13,13 @@ background: ${({ theme }) => theme.lightgrey} ;
 box-shadow: 1px -12px 39px 0px #000000;
 z-index: 99999999;
 
+section {
+  svg{
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.blue};
+  }
+}
+
 ul {
     display: flex;
     align-items: center;
@@ -23,10 +30,15 @@ ul {
     font-weight: bold;
     transition: 0.4s all;
 
+    @media(max-width: 900px){
+        font-size: 1rem;
+        gap: 1rem;      
+    }
+
     .mobile {
       display: none;
     }
-    @media(max-width: 900px) {
+    @media(max-width: 840px) {
       .mobile {
         display: initial;
       }
@@ -38,12 +50,12 @@ ul {
   @media(max-width: 700px) {
     padding: 14.5px 16px;
   }
- @media (max-width: 680px) {
+ @media (max-width: 840px) {
      > ul {
         display: none;
       }
     }
-@media (min-width: 681px) {
+@media (min-width: 841px) {
   > section {
     display: none;
   }
