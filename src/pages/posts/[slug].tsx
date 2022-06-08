@@ -65,7 +65,7 @@ export default function Post(data) {
 
 export async function getStaticProps(context) {
 
-    const res = await fetch(process.env.GRAPHQL_ACCESS_ENDPOINT, {
+    const res = await fetch('https://bmsblog.000webhostapp.com/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
