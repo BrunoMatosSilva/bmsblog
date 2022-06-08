@@ -2,8 +2,7 @@ import Head from "next/head";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Subscribe } from "../../components/Subscribe";
-import { ContainerPost, PostBody } from "../../styles/stylesPosts";
-
+import { ContainerPost, PostBody } from "../../styles/styles";
 export default function Post(data) {
     const post = data.post;
 
@@ -65,7 +64,7 @@ export default function Post(data) {
 
 export async function getStaticProps(context) {
 
-    const res = await fetch('https://bmsblog.000webhostapp.com/graphql', {
+    const res = await fetch(process.env.GRAPHQL_ACCESS_ENDPOINT || 'https://bmsblog.000webhostapp.com/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
