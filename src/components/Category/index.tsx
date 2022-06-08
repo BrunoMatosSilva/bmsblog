@@ -5,11 +5,12 @@ import { InputCategory } from '../InputCategory';
 import { Title } from '../Title';
 
 export function Category() {
+
   return (
     <CategoryContainer>
       <Title
         title="Browse The Category"
-        path="/"
+        path="/categories"
         category="See All Category"
         icon={<RiArrowRightSLine />}
       />
