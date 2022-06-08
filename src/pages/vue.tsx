@@ -8,6 +8,7 @@ import { Footer } from './../components/Footer';
 import { Header } from './../components/Header';
 import { Hero } from './../components/Hero';
 import { Subscribe } from './../components/Subscribe';
+import Fetch from 'isomorphic-fetch';
 
 export default function CategoryVue({ posts }) {
 
@@ -69,7 +70,7 @@ export default function CategoryVue({ posts }) {
 
 export async function getStaticProps() {
 
-    const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
+    const res = await Fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

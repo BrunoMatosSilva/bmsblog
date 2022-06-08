@@ -8,9 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/isomorphic-fetch": "^0.0.36",
     "aos": "^2.3.4",
     "graphql": "^16.5.0",
     "graphql-request": "^4.2.0",
+    "isomorphic-fetch": "^3.0.0",
     "next": "10.2.0",
     "next-images": "^1.7.0",
     "nextjs-progressbar": "^0.0.14",

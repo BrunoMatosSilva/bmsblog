@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Aos from 'aos';
+import Fetch from 'isomorphic-fetch';
 import { useEffect } from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import { Category } from '../components/Category';
@@ -74,7 +75,7 @@ export default function Home({ posts }) {
 
 export async function getServerSideProps() {
 
-  const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
+  const res = await Fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

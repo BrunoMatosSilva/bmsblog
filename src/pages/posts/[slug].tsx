@@ -3,6 +3,8 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Subscribe } from "../../components/Subscribe";
 import { ContainerPost, PostBody } from "../../styles/styles";
+import Fetch from 'isomorphic-fetch';
+
 export default function Post(data) {
     const post = data.post;
 
@@ -64,7 +66,7 @@ export default function Post(data) {
 
 export async function getStaticProps(context) {
 
-    const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
+    const res = await Fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -115,7 +117,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
 
-    const res = await fetch(process.env.GRAPHQL_ACCESS_ENDPOINT, {
+    const res = await Fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

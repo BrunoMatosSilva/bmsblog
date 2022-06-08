@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Fetch from 'isomorphic-fetch';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import { Title } from '../components/Title';
 import { Card, CardContainer, ContainerArticles } from '../styles/global';
@@ -69,7 +70,7 @@ export default function CategoryTailwind({ posts }) {
 
 export async function getStaticProps() {
 
-    const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
+    const res = await Fetch(process.env.NEXT_PUBLIC_GRAPHQL_ACCESS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
