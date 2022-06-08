@@ -2,11 +2,10 @@ import Head from "next/head";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Subscribe } from "../../components/Subscribe";
-import { ContainerPost, PostBody } from "./styles";
+import { ContainerPost, PostBody } from "../../styles/stylesPosts";
 
 export default function Post(data) {
     const post = data.post;
-    console.log(post);
 
     const datatime = (post.date)
     const today = new Date(datatime).toLocaleDateString('pt-BR', {

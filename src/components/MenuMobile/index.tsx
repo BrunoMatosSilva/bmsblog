@@ -12,11 +12,11 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
         <Container isVisible={menuIsVisible}>
             <IoClose size={45} onClick={() => setMenuIsVisible(false)} />
             <ul>
-                <a href="/">Home</a>
-                <a href="/category">Category</a>
-                <a href="/about">About Me</a>
-                <a href="/">Search</a>
-                <a href="/">Buy Me a Coffe</a>
+                <a href="/" onClick={() => setMenuIsVisible(false)}>Home</a>
+                <a href="/category" onClick={() => setMenuIsVisible(false)}>Category</a>
+                <a href="/about" onClick={() => setMenuIsVisible(false)}>About Me</a>
+                <a href="/" onClick={() => setMenuIsVisible(false)}>Search</a>
+                <a href="/" onClick={() => setMenuIsVisible(false)}>Buy Me a Coffe</a>
             </ul>
         </Container>
     );

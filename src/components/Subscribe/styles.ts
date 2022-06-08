@@ -31,6 +31,14 @@ h2 {
     color: ${({ theme }) => theme.black};
     font-size: 2.25rem;
     padding-top: 2rem;
+
+    @media(max-width: 550px){
+        font-size: 1.5rem;
+    }
+
+    @media(max-width: 390px){
+        font-size: 1rem;
+    }
 }
 
 p {
@@ -38,6 +46,15 @@ p {
     font-size: 1.25rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    @media(max-width: 550px){
+        font-size: 0.85rem;
+    }
+
+    @media(max-width: 390px){
+        font-size: 0.65rem;
+        margin: 0 1rem;
+    }
 }
 } 
 `;

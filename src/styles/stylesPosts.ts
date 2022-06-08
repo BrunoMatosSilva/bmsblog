@@ -29,6 +29,14 @@ gap: 1rem;
         height: 25rem;
         border-radius: 0.78rem;
         object-fit: cover;
+
+        @media(max-width:550px) {
+        max-width: 25rem;
+    }
+
+        @media(max-width: 390px){
+            max-width: 18rem;
+        }
     }
 }
 
@@ -85,6 +93,7 @@ article {
     padding-bottom: 4rem;
 
     max-width: 1000px;
+
     h3 {
         font-size: 1.75rem;
     }

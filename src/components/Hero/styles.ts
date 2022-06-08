@@ -10,6 +10,11 @@ padding: 0 4rem;
 background-color: ${({ theme }) => theme.lightgrey2};
 padding-top: 8rem;
 
+        @media(max-width: 550px){
+            padding-top: 4rem;
+            flex-direction: column-reverse;
+        }
+
 > section {
     max-width: 41.5rem;
     display: flex;
@@ -29,6 +34,14 @@ padding-top: 8rem;
         @media(max-width: 900px){
             font-size: 2rem;
         }
+
+        @media(max-width: 550px){
+            font-size: 1.5rem;
+        }
+
+        @media(max-width: 490px){
+            font-size: 1rem;
+        }
     }
 
     > div {
@@ -41,6 +54,10 @@ padding-top: 8rem;
 
             @media(max-width: 900px){
             font-size: 1rem;
+        }
+
+        @media(max-width: 490px){
+            font-size: 0.85rem;
         }
         }
     }

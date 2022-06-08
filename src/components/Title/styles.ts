@@ -14,6 +14,18 @@ export const HeaderTitle = styled.header`
         align-items: center;
         justify-content: center;
         color: ${({ theme }) => theme.black};
+        
+        @media(max-width: 550px){
+            font-size: 1rem;
+        }
+
+        @media(max-width: 490px){
+            font-size: 0.85rem;
+        }
+
+        @media(max-width: 390px){
+        font-size: 0.65rem;
+        }
     }
 
     a {
@@ -24,6 +36,18 @@ export const HeaderTitle = styled.header`
         font-size: 1.5rem;
         font-weight: bold;
         transition: 0.4s all;
+
+        @media(max-width: 550px){
+            font-size: 1rem;
+        }
+
+        @media(max-width: 490px){
+            font-size: 0.85rem;
+        }
+
+        @media(max-width: 390px){
+        font-size: 0.65rem;
+        }
 
         &:hover {
             color: ${({ theme }) => theme.blue};

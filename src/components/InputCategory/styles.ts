@@ -20,6 +20,27 @@ div {
         height: 8.25rem;
     }
 
+    @media(max-width: 550px){
+      width: 4.25rem;
+      height: 6.25rem;
+      align: center;
+      justify-content: center;
+    }
+
+    @media(max-width: 490px){
+        width: 3.25rem;
+        height: 4.25rem;
+        align: center;
+        justify-content: center;
+    }
+
+    @media(max-width: 390px){
+        width: 2.25rem;
+        height: 3.25rem;
+        align: center;
+        justify-content: center;
+    }
+
     &:hover {
         background-color: ${({ theme }) => theme.blue};
         color: ${({ theme }) => theme.white};
@@ -41,9 +62,29 @@ div {
             height: 0.85rem;
         }
 
+        @media(max-width: 550px){
+            margin-bottom: 3.5rem;
+            width: 0.85rem;
+            height: 0.85rem;
+        }
+
+        @media(max-width: 390px){
+            width: 0rem;
+            height: 0rem;
+            background: transparent;
+            }
+
         img {
             height: 1.50rem;
             width: 1.50rem;
+
+            @media(max-width: 550px){
+            margin-right: 0.50rem;
+            }
+
+            @media(max-width: 490px){
+            margin-right: 1.7rem;
+            }
         }
     }
 
@@ -55,6 +96,10 @@ div {
 
         @media(max-width: 900px){
             font-size: 0.65rem;
+        }
+
+        @media(max-width: 550px){
+            display: none;
         }
     }
 

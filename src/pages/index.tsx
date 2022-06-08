@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Aos from 'aos';
+import { useEffect } from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import { Category } from '../components/Category';
 import { Footer } from '../components/Footer';
@@ -8,9 +10,12 @@ import { Hero } from '../components/Hero';
 import { Subscribe } from '../components/Subscribe';
 import { Title } from '../components/Title';
 import { Card, CardContainer, ContainerArticles } from '../styles/global';
+import 'aos/dist/aos.css';
 
 export default function Home({ posts }) {
-
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <div>
       <Head>
@@ -23,7 +28,7 @@ export default function Home({ posts }) {
         <Header />
         <Hero />
         <Category />
-        <ContainerArticles>
+        <ContainerArticles data-aos="fade-up">
           <Title title="Featured Article" path="/categories" category="See All Category" icon={<RiArrowRightSLine />} />
           <section>
             <CardContainer>

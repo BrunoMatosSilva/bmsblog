@@ -23,7 +23,7 @@ export default function CategoryVue({ posts }) {
                 <Header />
                 <Hero />
                 <Category />
-                <ContainerArticles>
+                <ContainerArticles data-aos="fade-up">
                     <Title title="VueJS" path="/categories" category="See All Category" icon={<RiArrowRightSLine />} />
                     <section>
                         <CardContainer>

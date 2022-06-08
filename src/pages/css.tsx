@@ -23,7 +23,7 @@ export default function CategoryCss({ posts }) {
                 <Header />
                 <Hero />
                 <Category />
-                <ContainerArticles>
+                <ContainerArticles data-aos="fade-up">
                     <Title title="Css" path="/categories" category="See All Category" icon={<RiArrowRightSLine />} />
                     <section>
                         <CardContainer>

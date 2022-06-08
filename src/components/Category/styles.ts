@@ -12,9 +12,5 @@ export const CategoryContainer = styled.div`
     padding-top: 2rem;
     padding-bottom: 4rem;
     gap: 2rem;
-
-    @media(max-width: 900px){
-      
-    }
   }
 `;

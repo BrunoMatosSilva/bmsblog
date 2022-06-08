@@ -9,6 +9,10 @@ padding: 0 6rem;
 padding-top: 4rem;
 padding-bottom: 4rem;
 
+        @media(max-width: 550px){
+            justify-content: center;
+        }
+
 section {
     display: flex;
     justify-content: flex-start;
@@ -18,6 +22,11 @@ section {
     @media(max-width: 900px){
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 550px){
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     > div {

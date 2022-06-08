@@ -21,7 +21,7 @@ export default function Categories({ posts }) {
       <main>
         <Header />
         <Hero />
-        <ContainerArticles>
+        <ContainerArticles data-aos="fade-up">
           <Title title="All Posts" path="/" category="Return Home" icon={<RiArrowLeftRightLine />} />
           <section>
             <CardContainer>

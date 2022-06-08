@@ -13,7 +13,7 @@ export function Category() {
         category="See All Category"
         icon={<RiArrowRightSLine />}
       />
-      <section>
+      <section data-aos="fade-down">
         <Link href="/css">
           <a><InputCategory icon="/css.svg" title="CSS" /></a>
         </Link>

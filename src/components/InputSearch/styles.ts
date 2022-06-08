@@ -21,6 +21,12 @@ input {
         height: 3rem;
         font-size: 1rem;
     }
+
+    @media(max-width: 390px){
+        width: 8rem;
+        height: 3rem;
+        font-size: 0.65rem;
+        }
 }
 
     &::placeholder {
@@ -46,6 +52,11 @@ button {
     @media(max-width: 900px){
         height: 3rem;
         font-size: 1rem;
+    }
+
+    @media(max-width: 390px){
+        height: 3rem;
+        font-size: 0.85rem;
     }
 
     &:hover {

@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <>
       <Container>
-        <section>
+        <section data-aos="fade-right">
           <h2>Hi, Im BMS Front End Dev</h2>
           <div>
             <p>On this blog I share tips and tricks, frameworks, projects, tutorials, etc
@@ -22,7 +22,9 @@ export function Hero() {
           </div>
           <InputSearch />
         </section>
-        <img src="/hero.svg" alt="boneco" />
+        <div data-aos="fade-left">
+          <img src="/hero.svg" alt="boneco" />
+        </div>
       </Container>
       <Spacer>
         <button type="button" onClick={handleScrollFeature}>

@@ -60,6 +60,16 @@ export default createGlobalStyle`
 export const ContainerArticles = styled.div`
 width: 100%;
 padding-top: 2rem;
+
+section {
+
+  @media(max-width: 550px){
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+}
+        
 `;
 
 export const CardContainer = styled.div`
@@ -74,6 +84,12 @@ padding-left: 5rem;
 
     @media(max-width: 550px){
       grid-template-columns: 1fr;
+      padding-left: 0;
+    }
+
+    @media(max-width: 390px){
+      grid-template-columns: 1fr;
+      padding-left: 1rem;
     }
 `;
 
