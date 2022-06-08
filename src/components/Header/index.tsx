@@ -23,7 +23,7 @@ export function Header() {
         <ul>
           <NavLink title="Home" path="/" />
           <NavLink title="Category" path="/categories" />
-          <NavLink title="About me" path="/" />
+          <NavLink title="About me" path="/about" />
           <a href="#">< BiSearch /> Search</a>
           <a className="blue"><SiBuymeacoffee /> Buy Me A Coffe</a>
         </ul>
