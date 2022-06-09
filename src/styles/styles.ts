@@ -47,6 +47,14 @@ gap: 1rem;
 
     h2 {
         font-size: 2rem;
+
+        @media(max-width:550px) {
+        font-size: 1.5rem;
+    }
+
+        @media(max-width: 390px){
+            font-size: 1rem;
+        }
     }
 
     > section {
@@ -93,6 +101,24 @@ article {
     padding-bottom: 4rem;
 
     max-width: 1000px;
+
+    @media(max-width:550px) {
+        max-width: 25rem;
+    }
+
+        @media(max-width: 390px){
+            max-width: 18rem;
+        }
+
+code {
+        @media(max-width:550px) {
+        max-width: 25rem;
+    }
+
+        @media(max-width: 390px){
+            max-width: 8rem;
+        }
+       }
 
     h3 {
         font-size: 1.75rem;
